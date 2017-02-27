@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "com.example.dong.menuleft"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/2'] } }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+
+
+    compile 'com.github.clans:fab:1.6.2'
+    compile 'com.ikimuhendis:ldrawer:0.1'
+
+
+    compile 'junit:junit:4.12'
+
+    compile 'com.firebase:firebase-client-android:2.5.2+'
+    compile 'com.balysv.materialmenu:material-menu:2.0.0'
+    compile 'com.ikimuhendis:ldrawer:0.1'
+
+    //hoạt hình
+    compile 'io.saeid:fab-loading:1.0.0'
+
+    compile 'com.firebaseui:firebase-ui-storage:0.6.0'
+    compile "com.squareup.picasso:picasso:2.4.0"
+
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+
+    compile 'me.grantland:autofittextview:0.2.+'
+
+
+
+
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dong.menuleft">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".app.DbRealm"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".StartActivity"
+            android:label="KhoiDong">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Trang chủ"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="login" />
+
+        <activity android:name=".AccountActivity"
+            android:label="Tài Khoản"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+            <!--dùng cho phiên bản android thấp hơn 4.0-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".AccountInformationActivity"
+            android:label="Thông tin tài khoản"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".AccountActivity">
+            <!--dùng cho phiên bản android thấp hơn 4.0-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".AddressActivity"
+            android:label="Địa Chỉ Giao Hàng"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".AccountActivity">
+            <!--dùng cho phiên bản android thấp hơn 4.0-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".ChangePassWordActivity"
+            android:label="Đổi Mật Khẩu"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".AccountActivity">
+            <!--dùng cho phiên bản android thấp hơn 4.0-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".CartActivity"
+            android:label="Giỏ Hàng"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+            <!--dùng cho phiên bản android thấp hơn 4.0-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+
+        <activity android:name=".DetailProductActivity"
+            android:label="Chi tiết sản phẩm"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+
+        </activity>
+
+    </application>
+
+</manifest>
