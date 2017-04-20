@@ -21,6 +21,7 @@
         android:layout_width="180dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         app:srcCompat="@mipmap/ic_launcher"
         android:id="@+id/imageSP"/>
 
@@ -46,13 +47,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center">
         <ImageButton
             android:id="@+id/btnGiam"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_rewind"
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
             />
@@ -60,27 +61,32 @@
             android:id="@+id/txtSoLuong"
             android:text="1"
             android:textSize="25dp"
+            android:gravity="center"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
+            android:layout_width="30dp"
             android:layout_height="wrap_content" />
         <ImageButton
             android:id="@+id/btnTang"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/arrow_right"/>
+            android:background="@drawable/ic_next"/>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnMua"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cho vào giỏ hàng"
-        android:textColor="#ffffff"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="20dp"
-        android:background="#00C900"/>
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btnMua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cho vào giỏ hàng"
+            android:textColor="#ffffff"
+            android:layout_margin="10dp"
+            android:background="#00C900"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
 </LinearLayout>

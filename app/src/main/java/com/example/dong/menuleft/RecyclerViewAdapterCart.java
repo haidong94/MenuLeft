@@ -33,26 +33,7 @@ public class RecyclerViewAdapterCart extends
         this.listData = listData;
     }
 
-    public class RecyclerViewHolder_Cart extends RecyclerView.ViewHolder implements View.OnClickListener {
-        public TextView ten,gia,tongTien;
-        public ImageView hinhanh;
 
-        public RecyclerViewHolder_Cart(View itemView) {
-            super(itemView);
-            itemView.setOnClickListener(this);
-            ten = (TextView) itemView.findViewById(R.id.txtTen);
-            gia=(TextView) itemView.findViewById(R.id.txtGia);
-            hinhanh = (ImageView) itemView.findViewById(R.id.imageSP);
-            tongTien=(TextView) itemView.findViewById(R.id.txtTongTien);
-
-        }
-
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(v.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
-
-        }
-    }
 
     @Override
     public int getItemCount() {
@@ -81,6 +62,28 @@ public class RecyclerViewAdapterCart extends
                 .fitCenter()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(viewHolder.hinhanh);
+    }
+
+
+    public class RecyclerViewHolder_Cart extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public TextView ten,gia,tongTien;
+        public ImageView hinhanh;
+
+        public RecyclerViewHolder_Cart(View itemView) {
+            super(itemView);
+            itemView.setOnClickListener(this);
+            ten = (TextView) itemView.findViewById(R.id.txtTen);
+            gia=(TextView) itemView.findViewById(R.id.txtGia);
+            hinhanh = (ImageView) itemView.findViewById(R.id.imageSP);
+            tongTien=(TextView) itemView.findViewById(R.id.txtTongTien);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(v.getContext(), "Clicked Country Position = " + getPosition(), Toast.LENGTH_SHORT).show();
+
+        }
     }
 
 }

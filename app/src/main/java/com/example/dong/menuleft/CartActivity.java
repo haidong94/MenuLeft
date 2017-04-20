@@ -34,6 +34,7 @@ public class CartActivity extends AppCompatActivity {
     private RecyclerViewAdapterCart adapter;
     private LinearLayoutManager lLayout;
 
+
     private TextView txtSumMoney;
     private Button btnPay;
 
@@ -42,6 +43,7 @@ public class CartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cart);
+
         toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
